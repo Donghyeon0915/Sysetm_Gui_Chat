@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 	pthread_t a_thread;
 
 	if (argc != 2) {
-		printf("사용법 :%s port\n", argv[0]);
+		printf("Usage :%s port\n", argv[0]);
 		exit(0);
 	}
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
 			write(1, "\033[0G", 4);		//Move cursor X to 0
 			printf("[%02d:%02d:%02d]", tm.tm_hour, tm.tm_min, tm.tm_sec);
 			fprintf(stderr, "\033[33m");//Change Text color Yellow
-			printf("사용자 1명 추가. 현재 참가자 수 = %d\n", active_user);
+			printf("Add 1 User. Current Users = %d\n", active_user);
 			fprintf(stderr, "\033[32m");//Change Text color green
 			fprintf(stderr, "server>"); //print cursor
 		}
@@ -149,26 +149,26 @@ int  listen_tcp(int host, int port, int backlog) {
 //thread by process
 void *thread_function(void *arg) {
 	int i;
-	printf("===========Availble Commands=========== \n");
+	printf("-----------Availble Commands----------- \n");
 	printf("help, active_user, active_chat, ip_list\n");
-	printf("======================================= \n");
+	printf("--------------------------------------- \n");
 	while (1) {
 		char buf_msg[MAX_LINE + 1];
 		fprintf(stderr, "\033[1;32m"); 
-		printf("Socket Server > ");
+		printf("Chat Server > ");
 		fgets(buf_msg, MAX_LINE, stdin); //input cmd
 		if (!strcmp(buf_msg, "\n")) continue;   // ignore enter key
 		else if (!strcmp(buf_msg, "help\n"))
 			printf("help, active_user, active_chat, ip_list\n");
 		else if (!strcmp(buf_msg, "active_user\n"))
-			printf("현재 참가자 수 = %d\n", active_user);
+			printf("Current Users = %d\n", active_user);
 		else if (!strcmp(buf_msg, "active_chat\n"))
-			printf("지금까지의 대화의 수 = %d\n", active_chat);
+			printf("Chat Count = %d\n", active_chat);
 		else if (!strcmp(buf_msg, "ip_list\n"))
 			for (i = 0; i < active_user; i++)
 				printf("%s\n", ip_list[i]);
 		else //handle exception
-			printf("해당 명령어가 없습니다. help 를 참조하세요.\n");
+			printf("Cannot Found This Command. Input help.\n");
 	}
 }
 
@@ -200,7 +200,7 @@ void cleant_remove(int s) {
 	write(1, "\033[0G", 4);		
 	fprintf(stderr, "\033[33m");
 	printf("[%02d:%02d:%02d]", tm.tm_hour, tm.tm_min, tm.tm_sec);
-	printf("채팅 참가자 1명 탈퇴. 현재 참가자 수 = %d\n", active_user);
+	printf("Exit 1 User. Current Users = %d\n", active_user);
 	fprintf(stderr, "\033[32m");
 	fprintf(stderr, "server>"); 
 }
