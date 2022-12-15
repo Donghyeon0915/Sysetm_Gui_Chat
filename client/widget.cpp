@@ -3,6 +3,8 @@
 #include <QRegExp>
 #include <QTcpSocket>
 
+QString username = "unknown";
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -31,9 +33,12 @@ void Widget::readyRead()
 
 void Widget::connected()
 {
-    socket->write(QString("/me:"+ui->messageLineEdit->text()+"\n").toUtf8());
-}
+    QString inputName = ui->nameLineEdit->text();
+    if(username != "") username = inputName;
 
+
+    socket->write(QString("Welcome : " + username + ui->messageLineEdit->text()+"\n").toUtf8());
+}
 
 
 void Widget::on_connectButton_clicked()
@@ -51,7 +56,7 @@ void Widget::on_sendButton_clicked()
 
     if(!message.isEmpty())
     {
-        socket->write(QString(message+"\n").toUtf8());
+        socket->write(QString(username + "> " + message+"\n").toUtf8());
     }
     ui->messageLineEdit->clear();
     ui->messageLineEdit->setFocus();

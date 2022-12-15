@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>471</width>
-     <height>381</height>
+     <width>631</width>
+     <height>441</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -35,6 +35,33 @@
     <property name="bottomMargin">
      <number>10</number>
     </property>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>File :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>PORT   : </string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QLineEdit" name="messageLineEdit"/>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="ipLineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="2" colspan="2">
      <widget class="QPushButton" name="connectButton">
       <property name="text">
@@ -42,14 +69,45 @@
       </property>
      </widget>
     </item>
-    <item row="4" column="0" colspan="2">
-     <widget class="QPushButton" name="sendButton">
+    <item row="6" column="0">
+     <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>Send Chat</string>
+       <string>Message:</string>
       </property>
      </widget>
     </item>
-    <item row="5" column="0" colspan="2">
+    <item row="9" column="1">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Upload</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>IP          :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2" colspan="2">
+     <widget class="QPushButton" name="sendButton">
+      <property name="text">
+       <string>Send Message</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="portLineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
      <widget class="QListWidget" name="listWidget">
       <property name="autoScroll">
        <bool>false</bool>
@@ -65,47 +123,20 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="portLineEdit">
-      <property name="minimumSize">
-       <size>
-        <width>400</width>
-        <height>0</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="ipLineEdit">
-      <property name="minimumSize">
-       <size>
-        <width>400</width>
-        <height>0</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QLabel" name="label">
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_5">
       <property name="text">
-       <string>IP ADDR:</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>PORT:</string>
+       <string>NAME  :</string>
       </property>
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="messageLineEdit"/>
-    </item>
-    <item row="3" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Message:</string>
+     <widget class="QLineEdit" name="nameLineEdit">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
       </property>
      </widget>
     </item>

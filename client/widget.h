@@ -1,3 +1,7 @@
+/*
+ * Donghyeon 20183188
+ */
+
 #ifndef WIDGET_H
 #define WIDGET_H
 
@@ -18,16 +22,16 @@ public:
     ~Widget();
 
 private slots:
-    void readyRead(); //서버로부터 메시지가 온경우
-    void connected(); //연결이 완료되었으면 서버에게 연결되었다고 알림
-    void on_connectButton_clicked(); //연결 버튼을 누름
-    void on_sendButton_clicked(); //채팅 메세지 전송 버튼을 누름
+    void readyRead();                   // Receive the message from Server
+    void connected();                   // If Client Connected Notify to Server
+    void on_connectButton_clicked();    // ConnetBtn Click Event
+    void on_sendButton_clicked();       // SendMessageBtn Click Event
 
     void on_messageLineEdit_returnPressed();
 
 private:
     Ui::Widget *ui;
-    QTcpSocket* socket; //나의 소켓
+    QTcpSocket* socket; //My Socket
 };
 
 #endif // WIDGET_H
