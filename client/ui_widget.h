@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'widget.ui'
 **
-** Created by: Qt User Interface Compiler version 5.5.1
+** Created by: Qt User Interface Compiler version 5.15.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,11 +10,8 @@
 #define UI_WIDGET_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -28,79 +25,104 @@ class Ui_Widget
 public:
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QPushButton *connectButton;
-    QPushButton *sendButton;
-    QListWidget *listWidget;
-    QLineEdit *portLineEdit;
-    QLineEdit *ipLineEdit;
-    QLabel *label;
+    QLabel *label_4;
     QLabel *label_3;
     QLineEdit *messageLineEdit;
+    QLineEdit *ipLineEdit;
+    QPushButton *connectButton;
     QLabel *label_2;
+    QPushButton *pushButton;
+    QLabel *label;
+    QPushButton *sendButton;
+    QLineEdit *portLineEdit;
+    QListWidget *listWidget;
+    QLabel *label_5;
+    QLineEdit *nameLineEdit;
 
     void setupUi(QWidget *Widget)
     {
         if (Widget->objectName().isEmpty())
-            Widget->setObjectName(QStringLiteral("Widget"));
+            Widget->setObjectName(QString::fromUtf8("Widget"));
         Widget->resize(1200, 1000);
         gridLayoutWidget = new QWidget(Widget);
-        gridLayoutWidget->setObjectName(QStringLiteral("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(10, 10, 471, 381));
+        gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
+        gridLayoutWidget->setGeometry(QRect(10, 10, 631, 441));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(10, 10, 10, 10);
-        connectButton = new QPushButton(gridLayoutWidget);
-        connectButton->setObjectName(QStringLiteral("connectButton"));
+        label_4 = new QLabel(gridLayoutWidget);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
 
-        gridLayout->addWidget(connectButton, 0, 2, 3, 2);
+        gridLayout->addWidget(label_4, 9, 0, 1, 1);
+
+        label_3 = new QLabel(gridLayoutWidget);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        gridLayout->addWidget(label_3, 2, 0, 1, 1);
+
+        messageLineEdit = new QLineEdit(gridLayoutWidget);
+        messageLineEdit->setObjectName(QString::fromUtf8("messageLineEdit"));
+
+        gridLayout->addWidget(messageLineEdit, 6, 1, 1, 1);
+
+        ipLineEdit = new QLineEdit(gridLayoutWidget);
+        ipLineEdit->setObjectName(QString::fromUtf8("ipLineEdit"));
+        ipLineEdit->setMinimumSize(QSize(400, 0));
+
+        gridLayout->addWidget(ipLineEdit, 0, 1, 1, 1);
+
+        connectButton = new QPushButton(gridLayoutWidget);
+        connectButton->setObjectName(QString::fromUtf8("connectButton"));
+
+        gridLayout->addWidget(connectButton, 0, 2, 1, 2);
+
+        label_2 = new QLabel(gridLayoutWidget);
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+
+        gridLayout->addWidget(label_2, 6, 0, 1, 1);
+
+        pushButton = new QPushButton(gridLayoutWidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout->addWidget(pushButton, 9, 1, 1, 1);
+
+        label = new QLabel(gridLayoutWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        gridLayout->addWidget(label, 0, 0, 1, 1);
 
         sendButton = new QPushButton(gridLayoutWidget);
-        sendButton->setObjectName(QStringLiteral("sendButton"));
+        sendButton->setObjectName(QString::fromUtf8("sendButton"));
 
-        gridLayout->addWidget(sendButton, 4, 0, 1, 2);
+        gridLayout->addWidget(sendButton, 6, 2, 1, 2);
+
+        portLineEdit = new QLineEdit(gridLayoutWidget);
+        portLineEdit->setObjectName(QString::fromUtf8("portLineEdit"));
+        portLineEdit->setMinimumSize(QSize(400, 0));
+
+        gridLayout->addWidget(portLineEdit, 2, 1, 1, 1);
 
         listWidget = new QListWidget(gridLayoutWidget);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setAutoScroll(false);
         listWidget->setAutoScrollMargin(3);
         listWidget->setDefaultDropAction(Qt::IgnoreAction);
         listWidget->setMovement(QListView::Static);
 
-        gridLayout->addWidget(listWidget, 5, 0, 1, 2);
+        gridLayout->addWidget(listWidget, 4, 1, 1, 1);
 
-        portLineEdit = new QLineEdit(gridLayoutWidget);
-        portLineEdit->setObjectName(QStringLiteral("portLineEdit"));
-        portLineEdit->setMinimumSize(QSize(400, 0));
+        label_5 = new QLabel(gridLayoutWidget);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
 
-        gridLayout->addWidget(portLineEdit, 1, 1, 1, 1);
+        gridLayout->addWidget(label_5, 3, 0, 1, 1);
 
-        ipLineEdit = new QLineEdit(gridLayoutWidget);
-        ipLineEdit->setObjectName(QStringLiteral("ipLineEdit"));
-        ipLineEdit->setMinimumSize(QSize(400, 0));
+        nameLineEdit = new QLineEdit(gridLayoutWidget);
+        nameLineEdit->setObjectName(QString::fromUtf8("nameLineEdit"));
+        nameLineEdit->setMinimumSize(QSize(400, 0));
 
-        gridLayout->addWidget(ipLineEdit, 0, 1, 1, 1);
-
-        label = new QLabel(gridLayoutWidget);
-        label->setObjectName(QStringLiteral("label"));
-
-        gridLayout->addWidget(label, 0, 0, 1, 1);
-
-        label_3 = new QLabel(gridLayoutWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-
-        gridLayout->addWidget(label_3, 1, 0, 1, 1);
-
-        messageLineEdit = new QLineEdit(gridLayoutWidget);
-        messageLineEdit->setObjectName(QStringLiteral("messageLineEdit"));
-
-        gridLayout->addWidget(messageLineEdit, 3, 1, 1, 1);
-
-        label_2 = new QLabel(gridLayoutWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-
-        gridLayout->addWidget(label_2, 3, 0, 1, 1);
+        gridLayout->addWidget(nameLineEdit, 3, 1, 1, 1);
 
 
         retranslateUi(Widget);
@@ -110,12 +132,15 @@ public:
 
     void retranslateUi(QWidget *Widget)
     {
-        Widget->setWindowTitle(QApplication::translate("Widget", "Widget", 0));
-        connectButton->setText(QApplication::translate("Widget", "Connect", 0));
-        sendButton->setText(QApplication::translate("Widget", "Send Chat", 0));
-        label->setText(QApplication::translate("Widget", "IP ADDR:", 0));
-        label_3->setText(QApplication::translate("Widget", "PORT:", 0));
-        label_2->setText(QApplication::translate("Widget", "Message:", 0));
+        Widget->setWindowTitle(QCoreApplication::translate("Widget", "Widget", nullptr));
+        label_4->setText(QCoreApplication::translate("Widget", "File :", nullptr));
+        label_3->setText(QCoreApplication::translate("Widget", "PORT   : ", nullptr));
+        connectButton->setText(QCoreApplication::translate("Widget", "Connect", nullptr));
+        label_2->setText(QCoreApplication::translate("Widget", "Message:", nullptr));
+        pushButton->setText(QCoreApplication::translate("Widget", "Upload", nullptr));
+        label->setText(QCoreApplication::translate("Widget", "IP          :", nullptr));
+        sendButton->setText(QCoreApplication::translate("Widget", "Send Message", nullptr));
+        label_5->setText(QCoreApplication::translate("Widget", "NAME  :", nullptr));
     } // retranslateUi
 
 };
